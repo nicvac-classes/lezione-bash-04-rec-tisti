@@ -1,0 +1,20 @@
+#!/bin/bash
+# ============================================================
+# VERIFICA BASH - Traccia E - Esercizio 5
+# Wildcard e redirect
+# ============================================================
+# OBIETTIVO:
+#   1. Elenca tutti i file .jpg nella cartella ambiente/immagini/lavoro/
+#   2. Salva le prime 5 righe di ambiente/log/server.log
+#      nel file ambiente/sandbox/estratto.txt
+#   3. Aggiungi le ultime 3 righe dello stesso log
+#      allo stesso file estratto.txt
+#
+# Scrivi i comandi qui sotto:
+# ------------------------------------------------------------
+
+find ../immagini/lavoro/ -type f  -name "*.jpg" 
+head -n 5 ../log/server.log > ../sandbox/estratto.txt
+tail -n 3 ../log/server.log >> ../sandbox/estratto.txt
+
+
